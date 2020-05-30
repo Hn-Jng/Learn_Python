@@ -14,10 +14,11 @@ print("c의 데이터 변수 형태는?:",type(c))
 print(10==10)
 print(10!=10)
 
-sentence = '안녕하세요.'+"반갑습니다."
-sentence.split()
+sentence = '안녕하세요.' + " 반갑습니다."
+print(sentence.split())
 print(sentence)
 """
+
 """
 languages = ['python', 'perl', 'c', 'java']
 
@@ -107,7 +108,7 @@ print(c.split())   #문자열나누기_나눈 값은 리스트에 하나씩 들�
 d="a:b:c:d"
 print(d.split(':'))
 """
-
+"""
 ## list자료형
 # list index
 a = [1, 2, 3, ['a', 'b', 'c']]
@@ -173,3 +174,97 @@ print(a.count(1))   # count
 a=[1,2,3,4]
 a.extend([5,6])    # extend = a+=[4,5]
 print(a)
+"""
+"""
+## tuple :  ()으로 둘러싸며, 값의 생성,삭제,수정 안됨. 초기화 가능
+t1=(1,2,3)
+t2=(4,5)
+t2= 4,
+t3 = (1,2,'a','b')
+print(t1+t2)
+print(t3[3])     #indexing
+print(t3[:2])    #slicing
+print(len(t3))   #length
+"""
+
+"""
+# Dictionary
+dic={'name':'Hn-Jng','phone':'01049498989','birth':'0407'}
+print(dic)
+print(dic['name'])
+a={1:'hi'}      #key(정수):value(문자열) 가능
+a={'a':[1,2,3]} #key(문자) : value(리스트) 가능
+print(a)
+a['name']='jng'
+print(a)
+a[3]=[5,6,7]
+print(a)
+del a['a']      #delete 
+print(a)       
+
+grade = {'hj':80,'jh':90}
+print(grade['hj'])  # 80 ,  dictionary value[key] -> value
+
+q={(1,2):'p'}
+print(q[(1,2)])     # tuple은 key 가능. list는 key 불가.
+
+dic={'name':'Hn-Jng','phone':'01049498989','birth':'0407'}
+print(dic.keys())     # key들의 객체반환
+print(dic.values())   # value들의 객체반환
+print(dic.items())    # key,value 쌍을 tuple로 묶은 객체 반환
+print(dic.get('name'))  # dic.get('name') = dic['name']
+                        # 존재하지 않는 키: get -> None, x['y'] -> Error의 차이있음
+print(dic.get('foo','bar'))  # dictionary에 해당값 없음. default값인 'bar' 돌려줌
+print('name'in dic)
+print('email'in dic)     #해당 key 값 있는지 조사. True or False 출력
+for k in dic.keys():
+    print(k)
+print(list(dic.keys()))   #dict_keys 객체를 list로 변환/ values, items 동일
+
+dic.clear()       # dict 쌍 모두 지우기
+print(dic)
+"""
+"""
+# 집합 자료형
+
+s1=set([1,2,3])
+s2=set("Hello")
+print(s1)
+print(s2)     # 중복삭제, 순서없음(Unordered) - indexing으로 값 얻을 수 없다
+
+l1=list(s2)   # indexing 하려면 list나 tuple로 변환 후 해야함
+print(l1)
+print(l1[2])
+
+s1=set([1,2,3,4,5,6])
+s2=set([4,5,6,7,8,9])
+
+print(s1&s2)              # 교집합
+print(s1|s2)              # 합집합
+print(s1-s2)              # 차집합
+
+s1.add(10)
+print(s1)                 # add (값 1개 추가)
+s2.update([10,11,12])
+print(s2)                 # update(값 여러 개 추가)
+s1.remove(10)
+print(s1)                 # remove _ 1개 값만 가능..?
+"""
+"""
+# Bool 자료형
+a=[1,2,3,4]
+while a:
+    print(a.pop())
+
+if []:
+    print("True")
+else:
+    print("False\n")
+
+print(bool('python'))
+print(bool(''))
+print(bool([1,2,3]))
+print(bool([]))
+print(bool(0))
+print(bool(3))
+"""
