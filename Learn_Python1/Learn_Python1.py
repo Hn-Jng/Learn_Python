@@ -269,11 +269,11 @@ print(bool(0))
 print(bool(3))
 """
 
-#실험
-a=[1,2,3]
-#b=a[:]
-b=a[:]
-#b=a
+# 실험
+a = [1, 2, 3]
+# b=a[:]
+b = a[:]
+# b=a
 
 a[0]
 a[1]
@@ -283,13 +283,13 @@ print(id(b))
 print(id(a[0]))
 print(id(a[1]))
 print(id(a[2]))
-a=b=c='d'
+a = b = c = 'd'
 print(a)
 print(b)
 print(c)
-a,b=('c','python')
-print(a,b)
-[a,b]=['c','python']
-print([a,b].pop())
-print(a,b)
-
+a, b = ('c', 'python')
+print(a, b)
+[a, b] = ['c', 'python']
+print([a, b].pop())
+print(a, b)
+print([a, b])
